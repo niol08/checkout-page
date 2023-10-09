@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="dist/index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- Sidebar start -->
+
+        <ol class="list-items">
+          <li id="1">
+            <div class="bg-scr">1</div>
+            <div class="none show">
+              <span class="step">Step 1 </span>
+              <span class="more-info">Your info</span>
+            </div>
+          </li>
+          <li id="2">
+            <div class="bg-scr">2</div>
+            <div class="none show">
+              <span class="step">Step 2 </span>
+              <span class="more-info">Select plan</span>
+            </div>
+          </li>
+          <li id="3">
+            <div class="bg-scr">3</div>
+            <div class="none show">
+              <span class="step">Step 3 </span>
+              <span class="more-info">Add-ons</span>
+            </div>
+          </li>
+          <li id="4">
+            <div class="bg-scr">4</div>
+            <div class="none show">
+              <span class="step">Step 4 </span>
+              <span class="more-info">Summary</span>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Sidebar end -->
+      </header>
+      <main>
+        <div class="content block" id="one">
+          <!-- Step 1 start -->
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <form action="#" method="post">
+            <div class="input-div">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="e.g. Stephen King"
+                required
+                autofocus
+                class="input"
+              />
+              <span class="name-error"></span>
+            </div>
+            <div class="input-div">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="e.g. stephenking@lorem.com"
+                required
+                class="input"
+              />
+              <span class="mail-error"></span>
+            </div>
+            <div class="input-div">
+              <label for="number">phone Number</label>
+              <input
+                type="tel"
+                placeholder="e.g. 234 8167369143"
+                required
+                id="num"
+                class="input"
+              />
+              <span class="num-error"></span>
+            </div>
+          </form>
+
+          <div class="position">
+            <button class="next">Next Step</button>
+          </div>
+
+          <!-- Step 1 end -->
+        </div>
+        <div class="content none" id="two">
+          <!-- Step 2 start -->
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+          <div class="plans">
+            <div class="img-prnt">
+              <div class="img">
+                <img src="./images/icon-arcade.svg" alt="icon-arcade" />
+              </div>
+              <div class="img-sib">
+                <span class="tag">Arcade</span>
+                <span class="price"
+                  >$<span class="number">9</span>/<span class="time-switch"
+                    >mo</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="img-prnt">
+              <div class="img">
+                <img src="./images/icon-advanced.svg" alt="icon-advanced" />
+              </div>
+              <div class="img-sib">
+                <span class="tag">Advanced</span>
+                <span class="price"
+                  >$<span class="number">12</span>/<span class="time-switch"
+                    >mo</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="img-prnt">
+              <div class="img">
+                <img src="./images/icon-pro.svg" alt="icon-pro" />
+              </div>
+              <div class="img-sib">
+                <span class="tag">Pro</span>
+                <span class="price"
+                  >$<span class="number">15</span>/<span class="time-switch"
+                    >mo</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="toggle">
+            <span class="active" id="month"> Monthly</span>
+            <span>
+              <label class="switch">
+                <input type="checkbox" id="checker" />
+                <span class="slider round"></span>
+              </label>
+            </span>
+            <span id="year">Yearly</span>
+          </div>
+
+          <div class="position">
+            <button class="prev">Go Back</button>
+            <button class="next">Next Step</button>
+          </div>
+          <!-- Step 2 end -->
+        </div>
+        <div class="content none" id="three">
+          <!-- Step 3 start -->
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+          <div class="add-ons" id="uno">
+            <div class="checkbox"><input type="checkbox" id="check-box" /></div>
+            <div class="check-sib">
+              <div class="tag">Online service</div>
+              <div class="info">Access to multiplayer games</div>
+            </div>
+            <div class="price">
+              +$<span class="add-on-price">1</span>/<span class="time-switch"
+                >mo</span
+              >
+            </div>
+          </div>
+          <div class="add-ons" id="dos">
+            <div class="checkbox"><input type="checkbox" id="check-box" /></div>
+            <div class="check-sib">
+              <div class="tag">Larger storage</div>
+              <div class="info">Extra 1TB of cloud save</div>
+            </div>
+            <div class="price">
+              +$<span class="add-on-price">2</span>/<span class="time-switch"
+                >mo</span
+              >
+            </div>
+          </div>
+          <div class="add-ons" id="tres">
+            <div class="checkbox"><input type="checkbox" id="check-box" /></div>
+            <div class="check-sib">
+              <div class="tag">Customizable Profile</div>
+              <div class="info">Custom theme on your profile</div>
+            </div>
+            <div class="price">
+              +$<span class="add-on-price">2</span>/<span class="time-switch"
+                >mo</span
+              >
+            </div>
+          </div>
+          <div class="position">
+            <button class="prev" id="new-btn">Go Back</button>
+            <button class="next">Next Step</button>
+          </div>
+
+          <!-- Step 3 end -->
+        </div>
+        <div class="content none" id="four">
+          <!-- Step 4 start -->
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+
+          <!-- Dynamically add subscription and add-on selections here -->
+          <div class="check-out">
+            <div class="plan_type">
+              <div class="subscription">
+                <div class="type">
+                  <span class="billing_type">Arcade</span> (<span
+                    class="sub_type"
+                    >monthly</span
+                  >)
+                </div>
+                <div class="change">change</div>
+              </div>
+              <div class="price_tag">
+                $<span class="numero">9</span>/<span class="plan_switch"
+                  >mo</span
+                >
+              </div>
+            </div>
+            <hr />
+            <div class="xtras">
+              <!-- <div class="xtra-style" id="">
+              <div class="xtra-service">online service</div>
+              <div>
+                +$<span class="xtra-num">2</span>/<span class="xtra-time"
+                  >mo</span
+                >
+              </div>
+            </div> -->
+            </div>
+          </div>
+          <!-- <div></div> -->
+
+          <!-- Total (per month/year) -->
+          <div class="total">
+            <div class="sum">
+              Total (per <span class="per-total">month</span>)
+            </div>
+            <div class="sum-total">
+              <span class="price-total"
+                >$<span class="trial"></span>/<span class="time-switch-total"
+                  >mo</span
+                ></span
+              >
+            </div>
+          </div>
+          <span class="number-total"></span>
+
+          <div class="position">
+            <button class="prev">Go Back</button>
+            <button class="confirm">Confirm</button>
+          </div>
+          <!-- Step 4 end -->
+        </div>
+        <div class="content none" id="five">
+          <!-- Step 5 start -->
+          <div class="thanks-img">
+            <img src="./images/icon-thank-you.svg" alt="icon-thank-you" />
+          </div>
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+
+          <!-- Step 5 end -->
+        </div>
+      </main>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">OLADEJO ENIOLA</a>.
+    </div> -->
+  </body>
+</html>
