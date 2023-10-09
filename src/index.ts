@@ -1,3 +1,5 @@
+export {}
+
 const sect: Element[] = Array.from(document.getElementsByClassName("content"))
 const nav: Element[] = Array.from(document.getElementsByClassName("bg-scr"))
 const nxtBtn: Element[] = Array.from(document.getElementsByClassName("next"))
